@@ -18,6 +18,7 @@ import org.junit.jupiter.api.Test;
 
 import ai.timefold.solver.core.api.solver.SolverFactory;
 import ai.timefold.solver.core.config.solver.SolverConfig;
+import pl.com.mikrzg.workplanner.backend.constraint.WorkPlannerConstraintProvider;
 
 public class SolverTest {
 
@@ -30,7 +31,7 @@ public class SolverTest {
 
 				.withEntityClasses(AvailableEmployee.class, Employee2Shift.class)
 
-				.withConstraintProviderClass(Rules.class)
+				.withConstraintProviderClass(WorkPlannerConstraintProvider.class)
 
 				.withTerminationSpentLimit(Duration.ofSeconds(10));
 
